@@ -1,0 +1,129 @@
+/* Split the screen in half */
+.body{
+  background:url(../images/purple.jpg);
+}
+.divide {
+ 
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  margin-top: 5px;
+ padding-bottom:40px;
+  animation: move 10s ease infinite;
+}
+
+
+/* Control the left side */
+.left {
+  left: 0;
+   background:url(../images/purple2.jpg) no-repeat;
+  /*background-color:black; */
+
+  /* Full height */
+  height:100%;
+
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  height:100%;
+  background:url(../images/purple2.jpg) no-repeat;
+
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom:25px;
+  margin-top:15px;
+}
+.left button{
+   background-color: white;
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  font-size:20px;
+  color:black;
+  border-radius:12px;
+  font-family:georgia;
+  width:150px;
+}
+.left button:hover{
+  background-color:lightblue;
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  font-size:25px;
+    font-family:georgia;
+}
+.right button{
+   background-color: white;
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  font-size:20px;
+  color:black;
+  border-radius:12px;
+    font-family:serif;
+    width:150px;
+}
+.right button:hover{
+  background-color:purple;
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  font-size:25px;
+    font-family:serif;
+}
+@keyframes NO {
+  from, to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+@keyframes arrive {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 50px, 0);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes move {
+    0% {
+        background-position: 0 0
+    }
+
+    50% {
+        background-position: 100% 0
+    }
+
+    100% {
+        background-position: 0 0
+    }
+}

@@ -1,0 +1,44 @@
+
+{% load static %} 
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'styles/st.css' %}" />
+</head>
+<body>
+  <div class="user">
+    <header class="user__header">
+        <img src="{%static 'images/123.jpg' %}" alt="" />
+        <h1 class="user__title" style="font-size:30px">Lets get started</h1>
+    </header>
+    
+    <form class="form" method="POST" action="{% url 'Register_form' %}" >
+      {%csrf_token%}
+        <div class="form__group" >
+            <input type="text" placeholder="First Name" class="form__input" name="fname" />
+        </div>
+        
+        <div class="form__group">
+            <input type="text" placeholder="Last Name" class="form__input"  name="lname" />
+        </div>
+        
+        <div class="form__group">
+            <input type="number" placeholder="Contact number" class="form__input"   name="mobile"/>
+        </div>
+        <button class="btn" type="submit">Submit form</button>
+        
+    </form>
+</div>
+</body>
+
+
+
+</html>
+
+
+
+{{my_stuff}}
+{% endblock %}

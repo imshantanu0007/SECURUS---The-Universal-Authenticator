@@ -1,0 +1,31 @@
+
+
+{% load static %} 
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'styles/st.css' %}" />
+</head>
+<body><h1 style="font-family:malgun gothic;font-size:80px;text-align:center;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  SECURUS</h1>
+  <div style="text-align:center;
+    transform: translate3d(0, 600px, 0);
+    animation: arrive 500ms ease-in-out 0.7s forwards;">
+  <form method="post" action="{% url 'Otp_validation' %}" >
+  	{%csrf_token%}
+    <label for="one time password" style="font-family: sans-serif;font-size:30px;padding-right:25px;">OTP</label>
+    <input type="OTP" name="otp_valid" placeholder=" Enter the OTP" maxlength="6" style="font-family: sans-serif;font-size:30px;"><br>
+    <button class="but"  type="submit" style="font-color:black;font-size:25px;">Submit</button>
+  </form>
+</div>
+</body>
+<script>
+</script>
+</html>
+
+
+
+{{my_stuff}}
+{% endblock %}

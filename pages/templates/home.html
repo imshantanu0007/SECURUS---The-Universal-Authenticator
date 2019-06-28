@@ -1,0 +1,38 @@
+
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Securus</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}" />
+</head>
+<body class="body">
+  <div class="divide left"><h1 style="color:white; font-size:80px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSEC</h1>
+  <div class="centered">
+    
+    <h1 style="color:white;font-family:georgia;">Existing User</h1>
+    <img src="{% static 'images/cas.png' %}" alt="login">
+    <form>
+      {%csrf_token%}
+      <a href="{% url 'home1' %}"><button type="button">Log in</button></a>
+    </form>
+    <p style="font-family:georgia;font-size:150%; color:white;">Your data is secured with us</p>
+  </div>
+</div>
+
+<div class="divide right"><h1 style="color:white; font-size:80px;">URUS</h1>
+  <div class="centered">
+
+    <h1 style="color:white;font-family:georgia;">New User</h1>
+    <img src="{%static 'images/img.png' %}" alt="">
+    <form>
+      {%csrf_token%}
+      <a href="{% url 'about' %}"><button type="button" >Register</button></a>
+    </form>
+    <p style="font-family:georgia;font-size:150%; color:white;">Be more secure about your data</p>
+  </div>
+</div>
+</body>
+{% endblock %}
